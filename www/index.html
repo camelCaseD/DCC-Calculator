@@ -42,9 +42,9 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 function calcForce() {
-                    if ($('#ball').val() == '') {
+                    if ($('#ball').val() == ''  || $('#ball').val() == 0) {
                         $('#force').text('Need to enter mass of the ball');
-                    } else if($('#pipe').val() == '') {
+                    } else if($('#pipe').val() == ''  || $('#pipe').val() == 0) {
                         $('#force').text('Need to enter the length of the pipe');
                     } else {
                         var a = Math.pow(parseFloat($("#velocity").text()), 2)/2*parseFloat($('#pipe').val());
@@ -59,7 +59,7 @@
                 }
 
                 function calcVelocity() {
-                    if ($('#range').val() == '') {
+                    if ($('#range').val() == ''  || $('#range').val() == 0) {
                         $('#velocity').text('Need to enter a range');
                     } else {
                         var vx = parseFloat($('#range').val())/parseFloat($('#time').text());
@@ -73,7 +73,7 @@
                 }
 
                 function calcTime() {
-                    if ($('#appHeight').val() == '') {
+                    if ($('#appHeight').val() == ''  || $('#appHeight').val() == 0) {
                         $('#time').text('Need to enter the Appeture Height');
                     } else {
                         var d = parseFloat($('#appHeight').val());
