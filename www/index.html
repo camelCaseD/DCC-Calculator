@@ -29,7 +29,7 @@
     <body>
         <div class="app">
             <div>Range: <input type="text" id="range" /></div>
-            <div>Height of Apeture: <input type="text" id="appHeight" /></div>
+            <div>Height of Aperture: <input type="text" id="appHeight" /></div>
             <div>Time: <span id="time"></span></div>
             <div>Velocity: <span id="velocity"></span></div>
             <div>Angle: <span id="angle"></span></div>
@@ -74,7 +74,7 @@
 
                 function calcTime() {
                     if ($('#appHeight').val() == ''  || $('#appHeight').val() == 0) {
-                        $('#time').text('Need to enter the Appeture Height');
+                        $('#time').text('Need to enter the Aperture Height');
                     } else {
                         var d = parseFloat($('#appHeight').val());
                         $('#time').text(Math.sqrt(2*d/9.8)*2+"s");
